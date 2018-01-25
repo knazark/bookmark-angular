@@ -3,13 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
-
-
 </head>
 <body>
-	{{ 1 + 1 }}
+	<ui-view></ui-view>
+
 	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+	<script src="node_modules/lodash/lodash.js"></script>
+
 	<!--OWN-->
 	<script src="app/app.js"></script>
+
+	<script src="app/bookmark/bookmark.states.js"></script>
+	<script src="app/bookmark/bookmark.services.js"></script>
+	<script src="app/bookmark/bookmark.components.js"></script>
 </body>
 </html>
