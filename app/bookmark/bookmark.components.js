@@ -1,5 +1,4 @@
 (function() {
-
 	'use strict';
 
 	var bookmarkList = {
@@ -7,10 +6,14 @@
 			items: '<'
 		},
 		templateUrl: 'app/bookmark/components/bookmark-list.html',
-		controller: function (BookmarksService) {
+		controller: function ($stateParams, BookmarksService) {
 			var vm = this;
 
-			console.log(vm);
+			BookmarksService.getBookmarks().then(function (resp) {
+				vm.bookmarks = resp.data;
+			});
+
+			vm.currentCategoryName = $stateParams.category;
 		}
 	};
 

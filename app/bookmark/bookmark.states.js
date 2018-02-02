@@ -15,20 +15,10 @@
 	function configure($stateProvider) {
 
 		$stateProvider
-			.state('app.bookmark', {
+			.state('app.bookmark.create', {
 				url: '',
 				views: {
-					bookmark: {
-						component: 'bookmarkList',
-						bindings: {
-							items: 'items.data'
-						}
-					}
-				},
-				resolve: {
-					items: function (BookmarksService) {
-						return BookmarksService.getBookmarks();
-					}
+
 				}
 			})
 		;
